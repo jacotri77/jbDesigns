@@ -7,30 +7,32 @@ import {postForm} from '../api/jbDesigns'
 class Footer extends Component{
 	constructor(props){
 		super(props)
-
 		this.state ={
-				firstname:'',
-				lastname:'',
-			}
-
+			firstName:'',
+			lastName:'',
+			emailAddress:'',
+			comments:''
 
 		}
-
+}
 	
 
 
-	handleSubmit(e){
+	handleSubmit = (e) =>{
 		e.preventDefault()
-		postForm(this.state.firstname)
-		this.setState ={
-			firstname: '',
-			lastname:''
-		}
+		postForm(this.state.form, this.state.firstName, this.state.lastName, this.state.emailAddress, this.state.comments)
+		this.setState({
+				firstName:'',
+				lastName:'',
+				emailAddress:'',
+				comments:''
+		
+		})
 	}
 
 	handleChange = (e) => {
   		this.setState({
-    	[e.target.name]:e.target.value,
+    	[e.target.name]:e.target.value
   })
 }
 
@@ -40,13 +42,13 @@ class Footer extends Component{
 		  <form onSubmit={this.handleSubmit}>
 		   <h2>Contact Me</h2>
 		    <label htmlFor="firstname">First Name</label>
-		    <input type="text" id="firstname"  onChange={this.handleChange}placeholder="First Name" value={this.state.firstname}/>
+		    <input type="text" id="firstname"  name="firstName" onChange={this.handleChange}placeholder="First Name" value={this.props.firstName}/>
 		    <label htmlFor="lastname">Last Name</label>
-		    <input type="text" id="lastname" onChange={this.handleChange} placeholder="Last Name"value={this.state.lastname}/>
+		    <input type="text" id="lastname" name="lastName" onChange={this.handleChange} placeholder="Last Name"value={this.props.lastName}/>
 		    <label htmlFor="emailaddy">Email Address</label>
-		    <input type="Email" id="emailaddy" onChange={this.handleChange} placeholder="Email Address"/>
+		    <input type="Email" id="emailaddy" name="emailAddress" onChange={this.handleChange} placeholder="Email Address" value={this.props.emailAddress}/>
 		    <label htmlFor="comment">Comments</label>
-		    <input type="textarea" id="comment" onChange={this.handleChange}placeholder="Comments Section"/>
+		    <input type="textarea" id="comment" name="comments" onChange={this.handleChange}placeholder="Comments Section"value={this.props.comments}/>
 		    <button type="submit" id="subButton">Submit</button>
 		  </form>
 		  <div className="social">    
@@ -65,8 +67,10 @@ class Footer extends Component{
 const mapStateToProps = function(appState) {
   return {
     form: appState.form,
-    firstname:appState.firstname,
-    lastname:appState.lastname
+    firstName:appState.firstName,
+    lastName:appState.lastName,
+    emailAddress:appState.emailAddress,
+    comments: appState.comments
   }
 }
 
