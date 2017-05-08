@@ -76,6 +76,7 @@ form {
   width: 100%;
   margin: 35px auto;
   font-weight: normal;
+  font-size: 18px;
   color: white;
   border: 2px solid white;
   
@@ -110,27 +111,57 @@ form input[type='text'], form input[type='email']{
 form input[type='textarea']{
   
   display: flex;
-  height: 150px;
+  height: 155px;
   width: 400px;
   margin:10px 0px 15px 0px;
   
 }
 
 
-button{
+#subButton{
   
   display: flex;
-  height: 50px;
+  height: 35px;
   width:80px;
   margin-top: 10px;
+  color:rgb(13, 18, 40);
+  padding-left: 15px;
+  cursor: pointer;
   background-color: white;
+  box-shadow: 10px 5px 25px #111;
+  transition: box-shadow  0.5s;
+}
+
+#subButton:hover { 
+
+  cursor: pointer;
+  background-color: rgb(116, 207, 246);
+  box-shadow: 10px 5px 25px #111;
+  transition: box-shadow  0.5s;
 }
 
 #firstColumn, #secondColumn{
-  flex:0 0 0%;
+  flex:0 0 15%;
   padding: 0px;
 }
 
 a:hover, a:visited, a:link, a:active{
   color: #000;
+}
+
+
+
+input:active, textarea:active{
+  border: 4px solid rgb(42, 106, 152);
+  outline-style: none;
+}
+
+input:hover, textarea:hover{
+  border: 4px solid rgb(42, 106, 152);
+  outline-style: none;
+}
+
+::-webkit-input-placeholder {
+  color:rgb(13, 18, 40);
+  
 }
