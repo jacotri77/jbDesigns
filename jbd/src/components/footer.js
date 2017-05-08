@@ -47,15 +47,19 @@ class Footer extends Component{
 		<div>	
 		  <form onSubmit={this.handleSubmit}>
 		   <h1 id="formH">Contact Me</h1>
+		   <div id="firstColumn">
 		    <label htmlFor="firstname">First Name</label>
 		    <input type="text" id="firstname"  name="firstName" onChange={this.handleChange}placeholder="First Name" value={this.props.firstName}/>
 		    <label htmlFor="lastname">Last Name</label>
 		    <input type="text" id="lastname" name="lastName" onChange={this.handleChange} placeholder="Last Name"value={this.props.lastName}/>
 		    <label htmlFor="emailaddy">Email Address</label>
 		    <input type="Email" id="emailaddy" name="emailAddress" onChange={this.handleChange} placeholder="Email Address" value={this.props.emailAddress}/>
+		   </div>
+		   <div id="secondColumn">
 		    <label htmlFor="comment">Comments</label>
 		    <input type="textarea" id="comment" name="comments" onChange={this.handleChange}placeholder="Comments Section"value={this.props.comments}/>
 		    <button type="submit" id="subButton">Submit</button>
+		   </div>
 		  </form>
 		  
 		   </div> 

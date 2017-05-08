@@ -18,13 +18,14 @@ body{
   width:90%;
   height: 100px;
   margin:auto;
+  border: 2px solid white;
   
 }
 
 .social {
   float: right;
   width: 25%;
-  margin-left: 40px;
+  margin-left: 60px;
   height: 80px;
   line-height: 100px;
 }
@@ -36,6 +37,7 @@ body{
 h1{
   color:white;
   text-align: left;
+  padding-left: 15px;
   font-weight: normal;
   float: left;
   font-size: 56px;
@@ -54,6 +56,7 @@ h1{
   clear: both;
 	margin: 20px auto;
   width:90%;
+ 
 	
 }
 
@@ -62,24 +65,19 @@ h1{
 	width:1368px;
 	margin:auto;
 }
-footer {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 35px;
-  height: 300px;
-  width: 100%;
-  border:5px solid white;
-  font-weight: normal;
-  font-family: 'Michroma', 'Aldrich', 'Allerta Stencil', sans-serif;
-  color: white;
-}
+
 
 form {
-  float: left;
-  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 450px;
   width: 100%;
-  display: block;
-  margin: auto;
+  margin: 35px auto;
+  font-weight: normal;
+  color: white;
+  border: 2px solid white;
   
 }
 
@@ -90,10 +88,10 @@ form label{
 }
 
 form input[type='text'], form input[type='email']{
-  display:block;
+
   height: 35px;
   width: 400px;
-  margin:0px 0px 15px 0px;
+  margin:10px 0px 15px 0px;
   
 }
 
@@ -110,21 +108,28 @@ form input[type='text'], form input[type='email']{
 }
 
 form input[type='textarea']{
-  display: block;
+  
+  display: flex;
   height: 150px;
   width: 400px;
+  margin:10px 0px 15px 0px;
   
 }
 
+
 button{
-  display: inline-block;
+  
+  display: flex;
   height: 50px;
   width:80px;
   margin-top: 10px;
   background-color: white;
 }
 
-
+#firstColumn, #secondColumn{
+  flex:0 0 0%;
+  padding: 0px;
+}
 
 a:hover, a:visited, a:link, a:active{
   color: #000;
