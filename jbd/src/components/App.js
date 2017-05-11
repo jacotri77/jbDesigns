@@ -11,13 +11,43 @@ class App extends Component{
 render(){
 	return (
     <div id="appContainer">
+
     <Header />
+
 		<div className="interiorDiv">
 		
-        <img src={require("../../images/profilejpg.jpg")} alt="#"/>
-     
+        <img src={require("../../images/profilejpg.jpg")} alt="#" id='interiorDivImg'/>
+        
+        <div
+          id='pictBox'>
+
+          <div 
+            id='boxOne'>
+
+              <img src={require("../../images/React-1-0.png")} />
+
+          </div>
+
+          <div 
+            id='boxTwo'>
+
+              <img src={require("../../images/redux.png")} />
+
+          </div>
+
+          <div 
+            id='boxThree'>
+
+              <img src={require("../../images/html5-css3-js-logo.png")} />
+
+          </div>
+
+          </div>
+
     <Footer />
-   </div>
+
+    </div>
+
    </div>
     )
   }
