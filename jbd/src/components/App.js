@@ -24,21 +24,21 @@ render(){
           <div 
             id='boxOne'>
 
-              <img src={require("../../images/React-1-0.png")} />
+              <img src={require("../../images/React-1-0.png")} alt="#"/>
 
           </div>
 
           <div 
             id='boxTwo'>
 
-              <img src={require("../../images/redux.png")} />
+              <img src={require("../../images/redux.png")} alt="#"/>
 
           </div>
 
           <div 
             id='boxThree'>
 
-              <img src={require("../../images/html5-css3-js-logo.png")} />
+              <img src={require("../../images/html5-css3-js-logo.png")} alt="#"/>
 
           </div>
 

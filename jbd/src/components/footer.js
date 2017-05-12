@@ -46,15 +46,15 @@ class Footer extends Component{
 		   <h1 id="formH">Contact Me</h1>
 		   <div id="firstColumn">
 		    <label htmlFor="firstname">First Name</label>
-		    <input type="text" id="firstname"  name="firstName" onChange={this.handleChange} value={this.props.firstName}/>
+		    <input type="text" id="firstname"  name="firstName" onChange={this.handleChange} value={this.props.firstName} autoComplete="off"/>
 		    <label htmlFor="lastname">Last Name</label>
-		    <input type="text" id="lastname" name="lastName" onChange={this.handleChange} value={this.props.lastName}/>
+		    <input type="text" id="lastname" name="lastName" onChange={this.handleChange} value={this.props.lastName} autoComplete="off"/>
 		    <label htmlFor="emailaddy">Email Address</label>
-		    <input type="Email" id="emailaddy" name="emailAddress" onChange={this.handleChange}  value={this.props.emailAddress}/>
+		    <input type="Email" id="emailaddy" name="emailAddress" onChange={this.handleChange}  value={this.props.emailAddress} autoComplete="off"/>
 		   </div>
 		   <div id="secondColumn">
 		    <label htmlFor="comment">Drop Me A Line</label>
-		    <input type="textarea" id="comment" name="comments" onChange={this.handleChange} value={this.props.comments}/>
+		    <input type="textarea" id="comment" name="comments" onChange={this.handleChange} value={this.props.comments} autoComplete="off"/>
 		    <button type="submit" id="subButton">Submit</button>
 		   </div>
 		  </form>
