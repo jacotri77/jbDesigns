@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import  '../index.css'
-
 import {connect} from 'react-redux'
 import Footer from './footer'
 import Header from './header'
